@@ -26,7 +26,7 @@ def buy_sell_hold(*args):
     for col in cols:
         if col > requirement:
             return 1
-        if col < requirement:
+        if col < -requirement:
             return -1
     return 0
 
