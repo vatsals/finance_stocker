@@ -80,7 +80,7 @@ def visualize_data():
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
 
-    heatmap = ax.pcolor(data, cmap=plt.cm.RdY1Gn)
+    heatmap = ax.pcolor(data, cmap=plt.cm.RdYlGn)
     fig.colorbar(heatmap)
     ax.set_xticks(np.arange(data.shape[0]) + 0.5, minor=False)
     ax.set_yticks(np.arange(data.shape[1]) + 0.5, minor=False)
@@ -92,11 +92,12 @@ def visualize_data():
 
     ax.set_xticklabels(column_labels)
     ax.set_yticklabels(row_labels)
-    plt.set_xticks(rotation=90)
+    plt.xticks(rotation=90)
     heatmap.set_clim(-1, 1)
     plt.tight_layout()
     plt.show()
 
+
 # get_data_from_yahoo()
 # combine_data()
-visualize_data()
+# visualize_data()
